@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sofiykaaa/pm_22_11/issues"
   },
-  "homepage": "https://github.com/sofiykaaa/pm_22_11#readme"
+  "homepage": "https://github.com/sofiykaaa/pm_22_11#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
