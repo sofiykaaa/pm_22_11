@@ -1,0 +1,19 @@
+{
+  "name": "pm_22_11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofiykaaa/pm_22_11.git"
+  },
+  "author": "Sofia Kindratyshyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sofiykaaa/pm_22_11/issues"
+  },
+  "homepage": "https://github.com/sofiykaaa/pm_22_11#readme"
+}
