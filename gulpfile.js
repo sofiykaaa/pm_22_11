@@ -23,7 +23,7 @@ const scss_task = () => src('app/scss/*.scss')
 .pipe(dest('dist/js'));
 
 function task_imgs() {
-    return src("app/img/*.+(jpg|jpeg|png|gif)")
+    return src("app/img/*.+(jpg|svg|jpeg|png|gif)")
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],

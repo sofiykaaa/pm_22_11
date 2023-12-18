@@ -1,35 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scichart@3.2.446/index.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/index.min.css">
-    <link rel="styles" href="scss/index.scss">
     <title>Infiinity</title>
-</head>
-<body>
-  <nav class="block-a">
-    <ul>
-        <li style="background-color:#243342;"><img src="img/infinity1.png" ></li>
-        <li><img src="img/house-door-fill.svg" alt="dashboard">
-            <a class="menu-left" href="#">DASHBOARD</a></li>
-        <li><img src="img/lightning-fill.svg" alt="app">
-            <a class="menu-left-2" href="#">App</a></li>
-        <li><img src="img/lock-fill.svg" alt="components">
-            <a class="menu-left-2" href="#">Components</a></li>
-        <li><img src="img/envelope-fill.svg" alt="email">
-            <a class="menu-left-2" href="#">EMAIL</a></li>
-        <li><img src="img/" alt="form">
-            <a class="menu-left-2" href="#">Form</a></li>
-        <li><img src="img/map-fill.svg" alt="maps">
-            <a class="menu-left-2" href="#">Maps</a></li>
-        <li><img src="img/file-earmark-fill.svg" alt="pages">
-            <a class="menu-left-2" href="#">Pages</a></li>
-        <li><img src="img/text-left.svg" alt="menu">
-            <a class="menu-left-2" href="#">Menu</a></li>
-    </ul>
-</nav>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    
+ </head>
+  <body> 
+    <header>
+      <div class="container">
+         <div class="first-block">
+           <img src="images/infinity1.png" alt="logo" width="170">
+         </div>
+         <div class="second-block">
+          <div class="dashboard">
+            <p class="header-right-text">Dashboard</p>
+          </div>
+          <div class="icons">
+            <button type="button" class="btn btn-primary position-relative">
+              <img class="icon" src="images/bell-fill.png" alt="grid">
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                3
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <button><img class="icon" src="images/envelope-fill.svg" alt="evelope"></button>
+            <button><img class="icon" src="images/search.svg" alt="glass"></button>
+            <button><img class="icon" src="images/grid-3x3-gap-fill.svg" alt="grid"></button>
+         </div>
+        </div>
+      </div>
+   </header>
+   
+   
+   
+   <main>
+       <div class="container-2">
+          <aside>
+              <div class="avatar-block">
+                <div class="avatar">
+                    <img class="mochamed" src="images/013.png" alt="Кругле фото" width="100" style=" border-radius: 50%;">
+                  </div>
+                    <div class="left-avatar">
+                       <p class="left-avatar-text">MOHAMED SAID</p>
+                       <div class="dropdown">
+                         <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Founder of App
+                          </button>
+                         <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#">Action</a></li>
+                           <li><a class="dropdown-item" href="#">Another action</a></li>
+                           <li><a class="dropdown-item" href="#">Something else here</a></li>
+                         </ul>
+                       </div>
+                     </div>
+                 </div>
+               <p class="slidebar-up-text">UI Kits</p>
+           <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+             <div class="position-sticky">
+               <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">
+                    <img class="menu-text" src="images/house-door-fill.svg">
+                    <p class="menu-text">Dashboard</p>
+                   </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#">
+                    <img class="menu-text" src="images/lightning-fill.svg">
+                    <p class="menu-text">Apps</p>
+                   </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#">
+                    <img class="menu-text" src="images/lock-fill.svg">
+                    <p class="menu-text">Components</p>
+                   </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link active" href="#">
+                     <img class="menu-text" src="images/envelope-fill.svg">
+                     <p class="menu-text">EMAIL</p>
+                   </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link active" href="#">
+                     <img class="menu-text" src="images/file-earmark-fill.svg">
+                     <p class="menu-text">Form</p>
+                   </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link active" href="#">
+                     <img class="menu-text" src="images/map-fill.svg">
+                     <p class="menu-text">Maps</p>
+                   </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link active" href="#">
+                     <img class="menu-text" src="/dist/images/">
+                     <p class="menu-text">Pages</p>
+                   </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link active" href="#">
+                    <img class="menu-text" src="images/text-left.svg">
+                    <p class="menu-text">Menu</p>
+                   </a>
+                 </li>
+                </ul>
+              </div>
+            </nav>
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+              <div class="position-sticky">
+                <ul class="nav flex-column">
+                 <li class="nav-item">
+                   <a class="nav-link active" href="#">
+                     <img class="menu-text" src="images/house-door-fill.svg">
+                     <p class="menu-text">Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                     <img class="menu-text" src="images/lightning-fill.svg">
+                     <p class="menu-text">Document</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                     <img class="menu-text" src="images/lock-fill.svg">
+                     <p class="menu-text">HTML Version</p>
+                    </a>
+                  </li>
+                  </ul>
+                  </div>
+                </nav>
+          </aside>
+
+        <div class="main-content">
+          <div class="wrapper">
+            <div class="top">
+            <div class="block-1">
+              <div class="text">
+                <div class="row">
+                  <div class="col-9">
+                    <h2>Welcome to infinity</h2>
+                    <p class="block-text">Number of viewers</p>
+                  </div>
+                  <div class="col-3">
+                    <p class="block-text-number">102</p>
+                  </div>
+                 </div>
+               </div>
+            </div>
+              <div class="block-2">
+                <div class="row">
+                  <div class="col-9">
+                    <h2>Active</h2>
+                    <p class="block-text">Leads/Contacts</p>
+                   </div>
+                   <div class="col-3">
+                     <p class="block-text-number">40</p>
+                   </div>
+              </div>
+            </div>
+          </div>
+          <div class="second-top">
+            <div class="second-tob-block-1">
+              <div class="second-tob-block-text-1">
+                <div class="row">
+                  <div class="col-8">
+                    <p class="tolal-number-blue">66,163k</p>
+                <p class="total">Total Leads</p>
+              </div>
+              <div class="col-4">
+                <img src="./images/clip.png">
+              </div>
+              </div>
+              </div>
+            <div class="block-footer-1">
+              <p class="block-footer-text">% change</p>
+              
+            </div>
+            </div>
+            <div class="second-tob-block-2">
+              <div class="second-tob-block-text-2">
+                <p class="tolal-number-red">3,490k</p>
+                <p class="total">Total Pending</p>
+              </div>
+            <div class="block-footer-2">
+              <p class="block-footer-text">% change</p>
+             </div>
+            </div>
+            <div class="second-tob-block-3">
+              <div class="second-tob-block-text-3">
+                <p class="tolal-number-green">8,372k</p>
+                <p class="total">Case Closed</p>
+              </div>
+            <div class="block-footer-3">
+              <p class="block-footer-text">% change</p>
+            </div>
+            </div>
+            <div class="second-tob-block-4">
+              <div class="second-tob-block-text-4">
+                <p class="tolal-number-yellow">5,355k</p>
+                <p class="total">Total Closed</p>
+              </div>
+            <div class="block-footer-4">
+              <p class="block-footer-text">% change</p>
+            </div>
+              </div>
+          </div>
+          <div class="sails">
+            <div class="sails-main">
+            <h1>Sailes in 2014</h1>
+            <p class="sailes-text">Collaboratively administrate empowered markets </br>via plug-and-play networks. Dynamically</br> procrastinate B2C users after installed base </br>benefits. Dramatically visualize customer </br>directed convergence without </br>
+              revolutionary ROI.</p>
+            </div>
+            <div class="chartCard">
+              <div class="chartBox">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+              <script>
+                const gradientPlugin = {
+    beforeDraw: function(chart) {
+      const ctx = chart.ctx;
+      const xAxis = chart.scales["x-axis-0"];
+      const yAxis = chart.scales["y-axis-0"];
+
+      chart.data.datasets.forEach(function(dataset) {
+        const meta = chart.getDatasetMeta(0);
+        const elements = meta.data;
+
+        for (let i = 0; i < elements.length - 1; i++) {
+          const startX = elements[i]._model.x;
+          const endX = elements[i + 1]._model.x;
+          const gradient = ctx.createLinearGradient(startX, 0, endX, 0);
+          
+          // Задайте кольори градієнта, наприклад, від червоного до зеленого
+          gradient.addColorStop(0, "rgba(255, 0, 0, 0.8)");
+          gradient.addColorStop(1, "rgba(0, 255, 0, 0.8)");
+
+          ctx.fillStyle = gradient;
+          ctx.fillRect(startX, yAxis.top, endX - startX, yAxis.bottom - yAxis.top);
+        }
+      });
+    },
+  };
+const ctx = document.getElementById('myChart').getContext('2d');
+ctx.canvas.style.backgroundColor = 'white';
+
+const gradient = ctx.createLinearGradient(0, 0, ctx.canvas.width, ctx.canvas.height);
+gradient.addColorStop(0.29, 'rgba(63, 81, 181, 1)');
+gradient.addColorStop(0.63, 'rgba(230, 75, 25, 1)');
+gradient.addColorStop(0.75, 'rgba(254, 160, 0, 1)');
+gradient.addColorStop(1, 'rgba(78, 175, 79, 1)');
+
+const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May','Jun', 'Jul', 'Aug'];
+const data = [17, 14, 15, 14.5, 15.3, 13.7, 10, 16, 14, 15.7, 15.6, 13.5];
+
+const myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Rainbow Line Chart',
+            data: data,
+            borderColor: gradient,
+            borderWidth: 8,
+            borderCapStyle: 'round',
+            borderJoinStyle: 'round',
+            showLine: true,
+            tension: 0.5
+        }]
+    },
+    options: {
+        scales: {
+            x: [{
+                afterBuildTicks: function (axis) {
+                    axis.ticks.forEach(function (tick, index) {
+                        // Вимикаємо відображення вертикальних ліній сітки для міток з пустим зн  аченням
+                        if (labels[index] === '') {
+                            tick.major = false;
+                        }
+                    });
+                },
+                grid: {
+                    drawOnChartArea: false,
+                }
+            }],
+            y: {
+                beginAtZero: true,
+                display: false
+            }
+        },
+        
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        elements: {
+            point: {
+                radius: 0
+            }
+        }
+    }
+});
+                </script>
+          <div class="third-top">
+            <div class="third-top-block-1">
+              <div class="third-top-block-1-title">
+              <h4>ACTIVE LEADS</h4>
+              </div>
+              
+  <div class="table-container">
+    <div class="column">
+      <span class="label">Type</span>
+      <div class="text-color-blue">Buyer</div>
+      <div class="text-color-blue">Buyer</div>
+      <div class="text-color-green">Landclord</div>
+      <div class="text-color-blue">Buyer</div>
+      <div class="text-color-red">Seller</div>
+      <div class="text-color-blue">Buyer</div>
+      <div class="text-color-blue">Buyer</div>
+      <div class="text-color-blue">Buyer</div>
+    </div>
+
+    <div class="column">
+      <div class="combined-labels">
+        <span class="label">Lead</span>
+        <span class="label">Name</span>
+      </div>
+      <div class="text-list">Denise Ann</div>
+      <div class="text-list">Denise Ann</div>
+      <div class="text-list">Denise Ann</div>
+      <div class="text-list">Denise Ann</div>
+      <div class="text-list">Denise Ann</div>
+      <div class="text-list">Denise Ann</div>
+      <div class="text-list">Denise Ann</div>
+      <div class="text-list">Denise Ann</div>
+    </div>
+
+    <div class="column">
+      <span class="label">Views</span>
+      <div class="text-list">153</div>
+      <div class="text-list">153</div>
+      <div class="text-list">153</div>
+      <div class="text-list">153</div>
+      <div class="text-list">153</div>
+      <div class="text-list">153</div>
+      <div class="text-list">153</div>
+      <div class="text-list">153</div>
+    </div>
+
+    <div class="column">
+      <span class="label">Favorites</span>
+      <div class="text-list">0</div>
+      <div class="text-list">0</div>
+      <div class="text-list">0</div>
+      <div class="text-list">0</div>
+      <div class="text-list">0</div>
+      <div class="text-list">0</div>
+      <div class="text-list">0</div>
+      <div class="text-list">0</div>
+    </div>
+
+    <div class="column">
+      <div class="combined-labels">
+        <span class="label">Last</span>
+        <span class="label">Visit</span>
+      </div>
+      <div class="text-list">9:23 AM</div>
+      <div class="text-list">9:23 AM</div>
+      <div class="text-list">9:23 AM</div>
+      <div class="text-list">9:23 AM</div>
+      <div class="text-list">9:23 AM</div>
+      <div class="text-list">9:23 AM</div>
+      <div class="text-list">9:23 AM</div>
+      <div class="text-list">9:23 AM</div>
+    </div>
+    <div class="column">
+      <div class="combined-labels">
+        <span class="label">Last</span>
+        <span class="label">Action</span>
+      </div>
+      <div class="text-list">8/27/2015</div>
+      <div class="text-list">8/27/2015</div>
+      <div class="text-list">8/27/2015</div>
+      <div class="text-list">8/27/2015</div>
+      <div class="text-list">8/27/2015</div>
+      <div class="text-list">8/27/2015</div>
+      <div class="text-list">8/27/2015</div>
+      <div class="text-list">8/27/2015</div>
+    </div>
+  </div>
+            </div>
+            <div class="third-top-block-2">
+              <div class="main-content-block">
+              <div class="third-top-title">
+              <div class="row">
+                <div class="col-6">
+             <h4>TODO LIST</h4>
+            </div>
+            <div class="col-6">
+             <button onclick="toggleAll()">Toggle All</button>
+            </div>
+            </div>
+          </div>
+             <div class="container mt-4">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                  <label class="form-check-label" for="firstCheckbox">Collaboratively administrate</label>
+                </li>
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                  <label class="form-check-label" for="secondCheckbox">Another todo on the list. Add as many you want.</label>
+                </li>
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                  <label class="form-check-label" for="thirdCheckbox">Dramatically maintain clicks-and-mortar</label>
+                </li>
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                  <label class="form-check-label" for="thirdCheckbox">administrate empowered markets.</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+            <div class="footer-bottons">
+              <div class="buttons-left">
+                <button class="green-button">All</button>
+                <button class="button">Active</button>
+                <button class="button-third">Clear Completed ( )</button>
+            </div>
+            </div>
+            </div>
+          </div>
+
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script>
+              $(document).ready(function () {
+                $('.list-group-item').click(function () {
+                  $(this).toggleClass('active');
+                });
+              });
+            </script>
+             <script>function toggleAll() {
+              var checkboxes = document.querySelectorAll('.form-check-input');
+              checkboxes.forEach(function(checkbox) {
+                  if (checkbox.checked) {
+                      checkbox.checked = false;
+                      updateCheckboxStyle(checkbox);
+                  }
+              });
+          }
+          
+          function updateCheckboxStyle(checkbox) {
+              var label = checkbox.nextElementSibling;
+              if (checkbox.checked) {
+                  label.classList.add('checked');
+              } else {
+                  label.classList.remove('checked');
+              }
+          }
+          
+          
+          </script>
+            <div class="last-block">
+              <div class="first-last-block">
+                <div class="top-last-block">
+                  <div class="top-last-block-title">
+                    <h4>ACTIVITIES</h4>
+                  </div>
+                    <div class="vertical-line">
+                      <div class="circle-1"></div>
+                      <div class="action">
+                      <p class="time-text">12:00pm</p>
+                      <p class="action-text">Template Builder Access (Video tutorial inside documentation)</p>
+                    </div>
+                      <div class="circle-2"></div>
+                      <div class="action">
+                      <p class="time-text">12:00pm</p>
+                      <p class="action-text">Designed the wordpress theme lily created her account</p>
+                    </div>
+                      <div class="circle-3"></div>
+                      <div class="action">
+                      <p class="time-text">12:00pm</p>
+                      <p class="action-text">Your domain will expired in 13 days.</p>
+                    </div>
+                    </div>   
+                </div>
+                <div class="down-last-block">
+                    <p class="last-block-title">ACTIVITIES</p>
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="circle-diagram">
+                          <canvas id="mycircleChart" width="100" height="100"></canvas>
+                          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                    
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+  // Функція для отримання даних
+  function getData() {
+    $.get('data.json', function(data) {
+      // Викликається після успішного отримання даних
+      updateChart(data.chartData);
+    });
+  }
+
+  // Функція для оновлення колової діаграми
+  function updateChart(chartData) {
+    var ctxmycircleChart = document.getElementById('mycircleChart').getContext('2d');
+
+    var mycircleChart = new Chart(ctxmycircleChart, {
+      type: 'pie',
+      data: {
+        labels: chartData.labels,
+        datasets: [{
+          data: chartData.data,
+          backgroundColor: chartData.colors,
+          borderWidth: 0,
+        }]
+      },
+      options: {
+        cutoutPercentage: 0,
+        legend: {
+          display: true,
+          position: 'right',
+          labels: {
+            boxWidth: 20
+          }
+        },
+        tooltips: {
+          enabled: false
+        },
+        elements: {
+          arc: {
+            borderWidth: 0
+          }
+        }
+      }
+    });
+  }
+
+  // Викликати функцію отримання даних при завантаженні сторінки
+  getData();
+});
+
+</script>
+
+                          
+
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <div class="square-block">
+                        <div class="square dark-blue"></div>
+                        <p class="square-block-items">Chrome</p>
+                      </div>
+                      <div class="square-block">
+                        <div class="square blue"></div>
+                        <p class="square-block-items">Safari</p>
+                      </div>
+                      <div class="square-block">
+                        <div class="square green"></div>
+                        <p class="square-block-items">Firefox</p>
+                      </div>
+                      </div>
+                      <div class="col-7">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                           do eiusmod tempor incidiclut ul labore et dolore magna 
+                           aliqua.Ut enim ad minim veniam , quis nostrud exercication 
+                           ullamco laboris nici ut.
+                          </p>
+                       </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="second-last-block">
+                <div class="second-last-block-title">
+                <h4>ANALYTIC</h4>
+              </div>
+                <div id="myBarChart-Block">
+                  <canvas id="myBarChart" width="400" height="250"></canvas>
+                </div>
+                 <script>
+
+                  const chartData = {
+               labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May','Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Now'],
+               datasets: [{
+            label: 'Dataset 1',
+            data: [460, 220, 220, 220, 460, 390, 460, 460, 460, 390, 460, 460],
+                  backgroundColor: 'rgba(63,81,181,1)',
+                  stack: 'stack1',
+                    
+                 },{
+            label: 'Dataset 2',
+            data: [220, 70, 90, 100, 220, 190, 130, 210, 240, 160, 210, 240], // Значення стовпчиків для Dataset 2 (ось Y)
+            backgroundColor: 'rgba(47,63,159, 1)',
+            stack: 'stack1',
+        }],
+             };
+
+                  const options = {
+                plugins: {
+                   legend: {
+                       display: false, // Вимикаємо вивід легенди
+                  },
+                   tooltip: {
+            enabled: false, 
+                        callbacks: {
+                           label: (context) => {
+                               const dataIndex = context.dataIndex;
+                               const datasetIndex = context.datasetIndex;
+                                   },
+                                 },
+                               },
+                             },
+                             scales: {
+        y: {
+            beginAtZero: false, 
+            min: 100,
+            max: 800,
+            grid: {
+                display: false, // Вимикаємо відображення сітки для шкали X
+            },
+            barPercentage: 1, // Відсоток ширини стовпчика відносно ширини категорії
+            categoryPercentage: 1,
+        },
+        x: {
+            stacked: true, // Дозволяє накладати стовпчики на один одного
+            grid: {
+                display: false, // Вимикаємо відображення сітки для шкали X
+            },
+            ticks: {
+                font: {
+                    size: 13,
+                    weight: 250, 
+                },
+            },
+        },
+    },
+                           };
+
+                           const myBarChart = new Chart(document.getElementById('myBarChart').getContext('2d'), {
+                           type: 'bar',
+                           data: chartData,
+                           options: options,
+                           });
+                 </script>
+              </div>
+            </div>
+            <div class="links">
+              <p clas="footer-text">Copyright M7amadsa3ed 2015 . All rights reserved</p>
+              <ul class="links-list">
+                <li><a class="link-item" href="/">Careers</a></li>
+                <li><a class="link-item" href="/">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>        
+      </div>
+    </main>
+  </body>
 </html>
